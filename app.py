@@ -16,8 +16,8 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap');
 html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; background-color: #04080f; color: #e2eaf4; }
-.block-container { max-width: 720px !important; padding: 2rem 1rem 3rem !important; position: relative; z-index: 1; }
-@media (min-width: 480px) { .block-container { padding: 3rem 2rem 4rem !important; } }
+.block-container { max-width: 720px !important; padding: 0rem 1rem 3rem !important; position: relative; z-index: 1; }
+@media (min-width: 480px) { .block-container { padding: 0rem 2rem 4rem !important; } }
 .hero { text-align: center; margin-bottom: 2.2rem; padding: 0 .5rem; }
 .hero-eyebrow { font-size: clamp(.6rem, 2.5vw, .72rem); font-weight: 500; letter-spacing: .26em; text-transform: uppercase; color: #4d8eff; margin-bottom: .5rem; }
 .hero-title { font-family: 'Satoshi', 'DM Sans', sans-serif; font-size: clamp(2rem, 7vw, 4.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -.02em; color: #f5f2e8; margin: 0 0 .8rem; word-break: keep-all; white-space: nowrap; overflow: visible; }
@@ -85,12 +85,14 @@ st.markdown("""
 st.markdown("""
 <style>
 .footer { text-align: center; margin-top: 3.5rem; padding-top: 1.8rem; border-top: 1px solid #0d1f3c; }
-.footer-brand { font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; color: #1a2d50; margin-bottom: 1.1rem; }
+.footer-brand { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: #7a9cc0; margin-bottom: .3rem; font-weight: 500; }
+.footer-tagline { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: #4a6080; margin-bottom: 1.2rem; }
+.footer-tagline { font-size: .8rem; letter-spacing: .06em; color: #6a8ab0; margin-bottom: 1.4rem; }
 .footer-socials { display: flex; justify-content: center; gap: .75rem; margin-bottom: .85rem; flex-wrap: wrap; }
-.social-link { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: #080f1e; border: 1px solid #1a2d50; color: #2e4d7a; text-decoration: none; transition: background .2s, border-color .2s, color .2s, transform .2s, box-shadow .2s; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.social-link { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: #080f1e; border: 1px solid #1a2d50; color: #4d8eff; text-decoration: none; transition: background .2s, border-color .2s, color .2s, transform .2s, box-shadow .2s; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 .social-link:hover { background: #1d4ed8; border-color: #3b82f6; color: #fff; transform: translateY(-3px); box-shadow: 0 4px 16px rgba(29,78,216,.4); }
 .social-link:active { transform: translateY(0); background: #1e40af; }
-.footer-name { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: #1a2d50; }
+.footer-name { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: #4d6a8a; margin-top: .4rem; }
 #MainMenu, footer, header { visibility: hidden; }
 </style>
 """, unsafe_allow_html=True)
@@ -119,7 +121,7 @@ def recommend(movie_name, num=5):
 st.markdown("""
 <div class="hero">
     <div class="hero-eyebrow">Content-based filtering</div>
-    <div class="hero-title">MOVIE<br><span>RECOMMEDATION</span><br>System</div>
+    <div class="hero-title">MOVIES<br><span>RECOMMEDATION</span><br>SYSTEM</div>
     <div class="hero-sub">Pick a movie. Discover films you'll love.</div>
 </div>
 <hr class="divider">
@@ -163,7 +165,7 @@ if find_btn:
 # ── Footer ───────────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="footer">
-    <div class="footer-brand">Movie Recommendation System &middot; TF-IDF Cosine Similarity</div>
+    <div class="footer-brand">I make predictions, not spoilers.</div>
     <div class="footer-socials">
         <a href="https://www.linkedin.com/in/vishal-singh-here/" target="_blank" class="social-link" title="LinkedIn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
