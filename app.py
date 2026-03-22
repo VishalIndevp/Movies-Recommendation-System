@@ -13,13 +13,14 @@ st.set_page_config(
 # ── CSS Part 1: Fonts, base, background, container, hero ─────────────────────
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap');
 html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; background-color: #04080f; color: #e2eaf4; }
 .block-container { max-width: 720px !important; padding: 2rem 1rem 3rem !important; position: relative; z-index: 1; }
 @media (min-width: 480px) { .block-container { padding: 3rem 2rem 4rem !important; } }
 .hero { text-align: center; margin-bottom: 2.2rem; padding: 0 .5rem; }
 .hero-eyebrow { font-size: clamp(.6rem, 2.5vw, .72rem); font-weight: 500; letter-spacing: .26em; text-transform: uppercase; color: #4d8eff; margin-bottom: .5rem; }
-.hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.9rem, 8vw, 4.8rem); line-height: .95; letter-spacing: .03em; color: #f0f6ff; margin: 0 0 .8rem; word-break: break-word; }
+.hero-title { font-family: 'Satoshi', 'DM Sans', sans-serif; font-size: clamp(2rem, 7vw, 4.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -.02em; color: #f5f2e8; margin: 0 0 .8rem; word-break: keep-all; white-space: nowrap; overflow: visible; }
 .hero-title span { color: #3b82f6; }
 .hero-sub { font-size: clamp(.8rem, 3vw, .95rem); font-weight: 300; color: #4a6080; letter-spacing: .02em; }
 .divider { border: none; height: 1px; background: linear-gradient(90deg, transparent, #1a3a6e, transparent); margin: 0 0 1.8rem; }
@@ -46,7 +47,7 @@ div[data-testid="stTickBar"] > div { color: #2e4d7a !important; }
 [data-testid="stSlider"] + div,
 [data-testid="stSlider"] + div p { color: #c8d8f0 !important; }
 div[data-testid="stSlider"] * { color: #c8d8f0 !important; }
-div.stButton > button { width: 100%; margin-top: 1.2rem; padding: .9rem 2rem; background: #1d4ed8 !important; color: #fff !important; font-family: 'Bebas Neue', sans-serif; font-size: clamp(1rem, 4vw, 1.22rem); letter-spacing: .14em; border: none !important; border-radius: 8px; cursor: pointer; transition: background .2s, transform .15s, box-shadow .2s; min-height: 52px; touch-action: manipulation; box-shadow: 0 4px 24px rgba(29,78,216,.35); }
+div.stButton > button { width: 100%; margin-top: 1.2rem; padding: .9rem 2rem; background: #1d4ed8 !important; color: #fff !important; font-family: 'Satoshi', 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(1rem, 4vw, 1.1rem); letter-spacing: .08em; border: none !important; border-radius: 8px; cursor: pointer; transition: background .2s, transform .15s, box-shadow .2s; min-height: 52px; touch-action: manipulation; box-shadow: 0 4px 24px rgba(29,78,216,.35); }
 div.stButton > button:hover { background: #2563eb !important; color: #fff !important; border: none !important; transform: translateY(-2px); box-shadow: 0 6px 30px rgba(37,99,235,.45); }
 div.stButton > button:active, div.stButton > button:focus { background: #1e40af !important; color: #fff !important; border: none !important; outline: none !important; box-shadow: 0 4px 24px rgba(29,78,216,.35) !important; transform: translateY(0); }
 div.stButton > button:focus:not(:active) { background: #1d4ed8 !important; color: #fff !important; border: none !important; outline: none !important; box-shadow: 0 4px 24px rgba(29,78,216,.35) !important; }
@@ -57,7 +58,7 @@ div.stButton > button:focus:not(:active) { background: #1d4ed8 !important; color
 st.markdown("""
 <style>
 .section-label { font-size: .65rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: #3b82f6; margin-bottom: .3rem; margin-top: 2rem; }
-.results-header { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.2rem, 5vw, 1.6rem); letter-spacing: .08em; color: #f0f6ff; margin: .4rem 0 1rem; display: flex; align-items: center; gap: .6rem; }
+.results-header { font-family: 'Satoshi', 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(1.2rem, 5vw, 1.5rem); letter-spacing: -.01em; color: #f5f2e8; margin: .4rem 0 1rem; display: flex; align-items: center; gap: .6rem; }
 .results-header::after { content: ""; flex: 1; height: 1px; background: #1a2d50; }
 .movie-card { display: flex; align-items: center; gap: .8rem; background: #080f1e; border: 1px solid #102040; border-radius: 10px; padding: .85rem 1rem; margin-bottom: .5rem; transition: border-color .2s, transform .2s, box-shadow .2s; animation: slideIn .35s ease both; -webkit-tap-highlight-color: transparent; }
 @media (min-width: 480px) { .movie-card { gap: 1rem; padding: .9rem 1.2rem; } }
@@ -73,7 +74,7 @@ st.markdown("""
 .movie-card:nth-child(8) { animation-delay: .32s; }
 .movie-card:nth-child(9) { animation-delay: .36s; }
 .movie-card:nth-child(10) { animation-delay: .40s; }
-.movie-rank { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.2rem, 5vw, 1.6rem); color: #1a2d50; min-width: 1.8rem; line-height: 1; }
+.movie-rank { font-family: 'Satoshi', 'DM Sans', sans-serif; font-weight: 900; font-size: clamp(1.1rem, 4vw, 1.4rem); color: #1a2d50; min-width: 1.8rem; line-height: 1; }
 .movie-name { font-size: clamp(.85rem, 3.5vw, .98rem); font-weight: 400; color: #c8d8f0; letter-spacing: .01em; word-break: break-word; }
 .movie-dot { width: 6px; height: 6px; border-radius: 50%; background: #3b82f6; margin-left: auto; flex-shrink: 0; }
 .error-box { background: rgba(59,130,246,.07); border: 1px solid rgba(59,130,246,.25); border-radius: 8px; padding: .85rem 1rem; color: #60a5fa; font-size: clamp(.8rem, 3vw, .88rem); }
@@ -118,7 +119,7 @@ def recommend(movie_name, num=5):
 st.markdown("""
 <div class="hero">
     <div class="hero-eyebrow">Content-based filtering</div>
-    <div class="hero-title">MOVIE <span>RECOMMENDATION</span> SYSTEM</div>
+    <div class="hero-title">MOVIE<br><span>RECOMMEDATION</span><br>System</div>
     <div class="hero-sub">Pick a movie. Discover films you'll love.</div>
 </div>
 <hr class="divider">
